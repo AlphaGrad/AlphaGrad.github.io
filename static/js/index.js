@@ -76,3 +76,12 @@ $(document).ready(function() {
     bulmaSlider.attach();
 
 })
+
+function copyToClipboard(button, codeId) {
+  const text = document.getElementById(codeId).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const originalText = button.innerText;
+    button.innerText = 'Copied!';
+    setTimeout(() => button.innerText = originalText, 1500);
+  });
+}
