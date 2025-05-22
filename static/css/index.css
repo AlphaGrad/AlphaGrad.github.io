@@ -2,7 +2,6 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
-
 .footer .icon-link {
     font-size: 25px;
     color: #000;
@@ -208,3 +207,36 @@ pre {
 }
 
 /* end copy to clipboard */
+
+.h-center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.img-scale-center {
+  display: block;
+  margin-left: -50px;
+  margin-right: auto;
+  margin-top: -25px;
+  width: 125%;          /* increase this value to make it bigger */
+  max-width: 150%;
+  height: auto;
+}
+
+.container.is-fullwidth {
+  max-width: 100%;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.normal-img-scale-center {
+  display: block;
+  /* max-width: 100%; */
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+}
