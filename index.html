@@ -43,6 +43,7 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+
 </head>
 <body>
 
@@ -190,12 +191,22 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-      <img src="./static/images/GA-web.png"
-           alt="AlphaGrad"
-           class="image normal-img-scale-center">
-    </div>
+    <img src="./static/images/GA-web.png"
+         alt="AlphaGrad"
+         class="image normal-img-scale-center"
+         id="clickable-image-0">
   </div>
 </section>
+
+<!-- Modal -->
+<div class="modal" id="image-modal-0">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <img src="./static/images/GA-web.png" alt="AlphaGrad">
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -222,13 +233,12 @@
     <!--/ Abstract. -->
   </div>
 </section>
-
+<!-- 
 <section class="section">
   <div class="container is-max-desktop">
 
     <div class="columns is-centered">
 
-      <!-- Classification accuracy. -->
       <div class="column">
         <div class="content">
           <h2 class="title is-3">Classification accuracy of different models across subjects</h2>
@@ -237,12 +247,11 @@
           </p>
           <img src="./static/images/subject_accuracy.png"
                alt="Classification accuracy"
-               class="image normal-img-scale-center">
+               class="image normal-img-scale-center"
+               id="clickable-image">
         </div>
       </div>
-      <!--/ Classification accuracy. -->
 
-      <!-- Subject-wise accuracy difference. -->
       <div class="column">
         <h2 class="title is-3">Subject-wise accuracy difference</h2>
         <div class="columns is-centered">
@@ -252,16 +261,73 @@
             </p>
             <img src="./static/images/diff_acc.png"
                  alt="Subject-wise accuracy difference"
-                 class="image normal-img-scale-center">
+                 class="image normal-img-scale-center"
+                 id="clickable-image">
           </div>
 
         </div>
       </div>
     </div>
-    <!--/ Subject-wise accuracy difference. -->
+
+  </div>
+</section> -->
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+      <!-- Classification accuracy -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Classification accuracy of different models across subjects</h2>
+          <p>
+            The figure presents the classification accuracy of different models across subjects in the OpenBMI dataset for a 3-class motor imagery (MI) task, evaluated under a 5-fold cross-validation setting...
+          </p>
+          <img src="./static/images/subject_accuracy.png"
+               alt="Classification accuracy"
+               class="image normal-img-scale-center"
+               id="clickable-image-1">
+        </div>
+      </div>
+
+      <!-- Subject-wise accuracy difference -->
+      <div class="column">
+        <h2 class="title is-3">Subject-wise accuracy difference</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              Subject-wise accuracy difference (%) between AlphaGrad (used as the reference) and other loss blending strategies...
+            </p>
+            <img src="./static/images/diff_acc.png"
+                 alt="Subject-wise accuracy difference"
+                 class="image normal-img-scale-center"
+                 id="clickable-image-2">
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
+<!-- Modal for image 1 -->
+<div class="modal" id="image-modal-1">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <img src="./static/images/subject_accuracy.png" alt="Classification accuracy">
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+<!-- Modal for image 2 -->
+<div class="modal" id="image-modal-2">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <img src="./static/images/diff_acc.png" alt="Subject-wise accuracy difference">
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
 
 
 <section class="section">

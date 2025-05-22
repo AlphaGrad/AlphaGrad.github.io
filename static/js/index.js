@@ -85,3 +85,32 @@ function copyToClipboard(button, codeId) {
     setTimeout(() => button.innerText = originalText, 1500);
   });
 }
+
+
+function setupImageModal(imageId, modalId) {
+    const image = document.getElementById(imageId);
+    const modal = document.getElementById(modalId);
+    const closeBtn = modal.querySelector(".modal-close");
+    const background = modal.querySelector(".modal-background");
+
+    if (!image || !modal || !closeBtn || !background) return;
+
+    image.addEventListener("click", () => {
+      modal.classList.add("is-active");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      modal.classList.remove("is-active");
+    });
+
+    background.addEventListener("click", () => {
+      modal.classList.remove("is-active");
+    });
+  }
+
+  // Setup both image modals
+  window.addEventListener("DOMContentLoaded", () => {
+    setupImageModal("clickable-image-0", "image-modal-0");
+    setupImageModal("clickable-image-1", "image-modal-1");
+    setupImageModal("clickable-image-2", "image-modal-2");
+  });

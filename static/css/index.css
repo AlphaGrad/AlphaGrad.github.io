@@ -234,9 +234,50 @@ pre {
 
 .normal-img-scale-center {
   display: block;
-  /* max-width: 100%; */
   width: 80%;
   margin-left: auto;
   margin-right: auto;
   height: auto;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .publication-title {
+    font-size: 1.5rem !important;
+  }
+  .title {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* @media (max-width: 480px) {
+  .publication-title {
+    font-size: 1.3rem !important;
+  }
+  .title {
+    font-size: 1.3rem !important;
+  }
+} */
+
+
+.modal-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  overflow: visible;
+}
+
+.modal-content img {
+  width: 150%;
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  transform-origin: center center;
+}
+
+.modal-content img:hover {
+  transform: scale(1.1);
+  z-index: 10; 
 }
